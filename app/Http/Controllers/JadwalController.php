@@ -1,13 +1,10 @@
 <?php
 
 namespace App\Http\Controllers;
-
 use App\Models\Jadwal;
-use App\Models\Dosen;
-use App\Models\Mahasiswa;
 use Illuminate\Http\Request;
 
-class JadwalController extends Controller
+class JadwalControllers extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,9 +13,8 @@ class JadwalController extends Controller
      */
     public function index()
     {
-        return view('jadwal.index', [
-            'jadwal' => Jadwal::all()
-        ]);
+        $jadwal = Jadwal::latest()->paginate(5);
+        return view ('jadwal.index',compact('jadwal'))->with('i', (request()->input('page', 1) -1) * 5);
     }
 
     /**
@@ -28,10 +24,7 @@ class JadwalController extends Controller
      */
     public function create()
     {
-        return view('jadwal.create', [
-            'mahasiswa' => Mahasiswa::all(),
-            'dosen' => Dosen::all()
-        ]);
+        return view('jadwal.create');
     }
 
     /**
@@ -58,10 +51,10 @@ class JadwalController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Jadwal  $jadwal
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(Jadwal $jadwal)
+    public function show( Jadwal $jadwal)
     {
         return view('jadwal.show',compact('jadwal'));
     }
@@ -69,7 +62,7 @@ class JadwalController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Jadwal  $jadwal
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
     public function edit(Jadwal $jadwal)
@@ -81,10 +74,10 @@ class JadwalController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Jadwal  $jadwal
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Jadwal $jadwal)
+    public function update(Request $request,Jadwal $jadwal)
     {
         $request->validate([
             'mahasiswa_id' => 'required',
@@ -103,7 +96,7 @@ class JadwalController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Jadwal  $jadwal
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
     public function destroy(Jadwal $jadwal)
