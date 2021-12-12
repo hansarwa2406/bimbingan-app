@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 use App\Models\Jadwal;
 use Illuminate\Http\Request;
 
-class JadwalControllers extends Controller
+class JadwalController extends Controller
 {
     /**
      * Display a listing of the resource.
