@@ -33,10 +33,10 @@ Route::resource('/dosen', DosenController::class);
 // --CRUD jadwal
 Route::resource('/jadwal', JadwalController::class);
 // --Login
-// Route::resource('/login', LoginController::class);
-Route::get('/login', LoginController::class, 'index');
+Route::resource('/login', LoginController::class);
+// Route::get('/login', LoginController::class, 'index');
 Route::post('/login', LoginController::class, 'authenticate');
 // --Register
-// Route::resource('/register', RegisterController::class);
-Route::get('/register', [RegisterController::class, 'index']);
-Route::post('/register', [RegisterController::class, 'store']);
+Route::resource('/register', RegisterController::class);
+// Route::get('/register', [RegisterController::class, 'index']);
+// Route::post('/register', [RegisterController::class, 'store']);
