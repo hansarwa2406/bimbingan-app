@@ -34,8 +34,8 @@ Route::resource('/dosen', DosenController::class);
 Route::resource('/jadwal', JadwalController::class);
 // --Login
 // Route::resource('/login', LoginController::class);
-Route::get('/login', LoginController::class, 'index');
-Route::post('/login', LoginController::class, 'authenticate');
+Route::get('/login', [LoginController::class, 'index']);
+Route::post('/login', [LoginController::class, 'authenticate']);
 // --Register
 // Route::resource('/register', RegisterController::class);
 Route::get('/register', [RegisterController::class, 'index']);
