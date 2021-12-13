@@ -2,7 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DosenController;
+use App\Http\Controllers\LoginController;
 use App\Http\Controllers\JadwalController;
+use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\MahasiswaController;
 /*
 |--------------------------------------------------------------------------
@@ -30,3 +32,11 @@ Route::resource('/mahasiswa', MahasiswaController::class);
 Route::resource('/dosen', DosenController::class);
 // --CRUD jadwal
 Route::resource('/jadwal', JadwalController::class);
+// --Login
+// Route::resource('/login', LoginController::class);
+Route::get('/login', LoginController::class, 'index');
+Route::post('/login', LoginController::class, 'authenticate');
+// --Register
+// Route::resource('/register', RegisterController::class);
+Route::get('/register', [RegisterController::class, 'index']);
+Route::post('/register', [RegisterController::class, 'store']);
