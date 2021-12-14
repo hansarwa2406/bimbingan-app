@@ -14,7 +14,7 @@ class JadwalDosenController extends Controller
      */
     public function index()
     {
-        //
+        return view('dosen.jadwal.index');
     }
 
     /**
@@ -35,7 +35,18 @@ class JadwalDosenController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'mahasiswa_id' => 'required',
+            'dosen_id' => 'required',
+            'judul' => 'required',
+            'deskripsi' => 'required',
+            'awal' => 'required',
+            'akhir' => 'required',
+            'status' => 'required'
+        ]);
+        Jadwal::create($request->all());
+
+        return redirect()->route('dosen.jadwal.index')->with('success','Jadwal Berhasil di Input');
     }
 
     /**
@@ -46,7 +57,7 @@ class JadwalDosenController extends Controller
      */
     public function show(Jadwal $jadwal)
     {
-        //
+        return view('dosen.jadwal.show',compact('jadwal'));
     }
 
     /**
@@ -57,7 +68,7 @@ class JadwalDosenController extends Controller
      */
     public function edit(Jadwal $jadwal)
     {
-        //
+        return view('dosen.jadwal.edit', compact('jadwal'));
     }
 
     /**
@@ -69,7 +80,19 @@ class JadwalDosenController extends Controller
      */
     public function update(Request $request, Jadwal $jadwal)
     {
-        //
+        $request->validate([
+            'mahasiswa_id' => 'required',
+            'dosen_id' => 'required',
+            'judul' => 'required',
+            'deskripsi' => 'required',
+            'awal' => 'required',
+            'akhir' => 'required',
+            'status' => 'required'
+        ]);
+
+        $jadwal->update($request->all());
+
+        return redirect()->route('dosen.jadwal.index')->with('success','Jadwal Berhasil di Update');
     }
 
     /**

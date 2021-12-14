@@ -6,6 +6,7 @@ use App\Http\Controllers\LoginController;
 use App\Http\Controllers\JadwalController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\MahasiswaController;
+use App\Http\Controllers\JadwalDosenController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -31,7 +32,7 @@ Route::resource('/mahasiswa', MahasiswaController::class);
 
 // --CRUD dosen
 Route::resource('/dosen', DosenController::class);
-Route::resource('/dosen/jadwal', JadwalController::class);
+Route::resource('/dosen/jadwal/index', JadwalDosenController::class);
 // --CRUD jadwal
 Route::resource('/jadwal', JadwalController::class);
 
