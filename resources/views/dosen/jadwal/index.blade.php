@@ -25,6 +25,7 @@
                     <th scope="col">Deskripsi</th>
                     <th scope="col">Awal</th>
                     <th scope="col">Akhir</th>
+                    <th scope="col">Status</th>
                     <th scope="col">Actions</th>
                 </tr>
             </thead>
@@ -38,16 +39,14 @@
                         <td>{{ $schedule->deskripsi }}</td>
                         <td>{{ $schedule->awal }}</td>
                         <td>{{ $schedule->akhir }}</td>
+                        <td>{{ $schedule->status }}</td>
                         <td class=" text-center">
                             <form action="{{ route('jadwal.destroy',$schedule->id) }}" method="POST" class=" d-inline">
                                 <a class="badge bg-info text-decoration-none" title="View" href="{{ route('jadwal.show',$schedule->id) }}"><span data-feather="eye"></a>
 
                                 <a class="badge bg-warning text-decoration-none" title="Edit" href="{{ route('jadwal.edit',$schedule->id) }}"><span data-feather="edit"></a>
             
-                                @csrf
-                                @method('DELETE')
-            
-                                <button type="submit" class="badge bg-danger border-0" title="Delete" onclick="return confirm('Apakah Anda yakin ingin menghapus data ini?')"><span data-feather="trash-2"></button>
+    
                             </form>
                         </td>
                     </tr>

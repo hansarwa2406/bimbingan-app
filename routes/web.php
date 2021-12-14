@@ -28,8 +28,10 @@ Route::get('/', function(){
 });
 // --CRUD mahasiswa
 Route::resource('/mahasiswa', MahasiswaController::class);
+
 // --CRUD dosen
 Route::resource('/dosen', DosenController::class);
+Route::resource('/dosen/jadwal', JadwalController::class);
 // --CRUD jadwal
 Route::resource('/jadwal', JadwalController::class);
 

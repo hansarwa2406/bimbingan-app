@@ -20,6 +20,12 @@
                 </a>
             </li>
             <li class="nav-item">
+                <a class="nav-link {{ Request::is('/dosen/jadwal*') ? 'active' : '' }}" href="/dosen/jadwal">
+                    <span data-feather="file-text"></span>
+                    Jadwal Dosen
+                </a>
+            </li>
+            <li class="nav-item">
                 <a class="nav-link {{ Request::is('jadwal*') ? 'active' : '' }}" href="/jadwal">
                     <span data-feather="clock"></span>
                     Jadwal Bimbingan
