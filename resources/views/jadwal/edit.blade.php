@@ -14,7 +14,7 @@
         @method('PUT')
         <div class="mb-3">
           <label for="mahasiswa_id" class="form-label">Mahasiswa</label>
-          <input type="text" class="form-control @error('mahasiswa_id') is-invalid @enderror" id="mahasiswa_id" name="mahasiswa_id" value="{{ old('mahasiswa_id', $jadwal->mahasiswa_id) }}" required autofocus>
+          <input type="text" class="form-control  @error('mahasiswa_id') is-invalid @enderror" id="mahasiswa_id" name="mahasiswa_id" value="{{ old('mahasiswa_id', $jadwal->mahasiswa_id) }}"  disabled>
           @error('mahasiswa_id')
               <div class="invalid-feedback">
                   {{ $message }}
@@ -23,7 +23,7 @@
       </div>
         <div class="mb-3">
           <label for="dosen_id" class="form-label">Dosen</label>
-          <input type="text" class="form-control @error('dosen_id') is-invalid @enderror" id="dosen_id" name="dosen_id" value="{{ old('dosen_id', $jadwal->dosen_id) }}" required autofocus>
+          <input type="text" class="form-control @error('dosen_id') is-invalid @enderror" id="dosen_id" name="dosen_id" value="{{ old('dosen_id', $jadwal->dosen_id) }}" disabled>
           @error('dosen_id')
               <div class="invalid-feedback">
                   {{ $message }}
@@ -32,7 +32,7 @@
       </div>
         <div class="mb-3">
           <label for="judul" class="form-label">Judul</label>
-          <input type="text" class="form-control @error('judul') is-invalid @enderror" id="judul" name="judul" value="{{ old('judul', $jadwal->judul) }}" required autofocus>
+          <input type="text" class="form-control @error('judul') is-invalid @enderror" id="judul" name="judul" value="{{ old('judul', $jadwal->judul) }}" disabled>
           @error('judul')
               <div class="invalid-feedback">
                   {{ $message }}
@@ -41,7 +41,7 @@
       </div>
         <div class="mb-3">
           <label for="deskripsi" class="form-label">Deskripsi</label>
-          <textarea class="form-control @error('deskripsi') is-invalid @enderror" style="height:150px" name="deskripsi" required autofocus >{{ old('deskripsi', $jadwal->deskripsi) }}</textarea>
+          <textarea class="form-control @error('deskripsi') is-invalid @enderror" style="height:150px" name="deskripsi" disabled >{{ old('deskripsi', $jadwal->deskripsi) }}</textarea>
 
           @error('deskripsi')
               <div class="invalid-feedback">
@@ -51,7 +51,7 @@
       </div>
         <div class="mb-3">
           <label for="awal" class="form-label">Awal</label>
-          <input type="text" class="form-control @error('awal') is-invalid @enderror" id="awal" name="awal" value="{{ old('awal', $jadwal->awal) }}" required autofocus>
+          <input type="text" class="form-control @error('awal') is-invalid @enderror" id="awal" name="awal" value="{{ old('awal', $jadwal->awal) }}" disabled>
           @error('awal')
               <div class="invalid-feedback">
                   {{ $message }}
@@ -60,7 +60,7 @@
       </div>
         <div class="mb-3">
           <label for="akhir" class="form-label">Akhir</label>
-          <input type="text" class="form-control @error('akhir') is-invalid @enderror" id="akhir" name="akhir" value="{{ old('akhir', $jadwal->akhir) }}" required autofocus>
+          <input type="text" class="form-control @error('akhir') is-invalid @enderror" id="akhir" name="akhir" value="{{ old('akhir', $jadwal->akhir) }}" disabled>
           @error('akhir')
               <div class="invalid-feedback">
                   {{ $message }}
