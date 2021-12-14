@@ -48,13 +48,6 @@
                             </p>
                         </div>
                     </div>
-                    <div class="col-xs-12 col-sm-12 col-md-12">
-                        <div class="form-group">
-                            <p>
-                                <h5><b>Status Bimbingan: </b> {{ $jadwal->status }}</h5>
-                            </p>
-                        </div>
-                    </div>
                     <div class="tools p-2 rounded-3">
                         <a href="{{ route('jadwal.index') }}" class="btn btn-secondary mb-3"><span data-feather="arrow-left"></span> Kembali</a>
                       </div>

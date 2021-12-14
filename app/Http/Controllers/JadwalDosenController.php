@@ -14,7 +14,8 @@ class JadwalDosenController extends Controller
      */
     public function index()
     {
-        return view('dosen.jadwal.index');
+        $jadwal = Jadwal::latest()->paginate(5);
+        return view ('jadwaldosen.index',compact('jadwal'))->with('i', (request()->input('page', 1) -1) * 5);
     }
 
     /**

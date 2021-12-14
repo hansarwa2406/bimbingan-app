@@ -14,7 +14,7 @@
     @endif
 
     <div class="table-responsive col-lg-10">
-        <a href="{{ route('jadwal.create') }}" class="btn btn-primary mb-3"><span data-feather="plus-circle"></span> Tambah Jadwal Bimbingan</a>
+        <a href="{{ route('jadwaldosen.create') }}" class="btn btn-primary mb-3"><span data-feather="plus-circle"></span> Tambah Jadwal Bimbingan</a>
         <table class="table table-striped table-sm">
             <thead>
                 <tr class=" text-center">
@@ -41,12 +41,15 @@
                         <td>{{ $schedule->akhir }}</td>
                         <td>{{ $schedule->status }}</td>
                         <td class=" text-center">
-                            <form action="{{ route('jadwal.destroy',$schedule->id) }}" method="POST" class=" d-inline">
-                                <a class="badge bg-info text-decoration-none" title="View" href="{{ route('jadwal.show',$schedule->id) }}"><span data-feather="eye"></a>
+                            <form action="{{ route('jadwaldosen.destroy',$schedule->id) }}" method="POST" class=" d-inline">
+                                <a class="badge bg-info text-decoration-none" title="View" href="{{ route('jadwaldosen.show',$schedule->id) }}"><span data-feather="eye"></a>
 
-                                <a class="badge bg-warning text-decoration-none" title="Edit" href="{{ route('jadwal.edit',$schedule->id) }}"><span data-feather="edit"></a>
+                                <a class="badge bg-warning text-decoration-none" title="Edit" href="{{ route('jadwaldosen.edit',$schedule->id) }}"><span data-feather="edit"></a>
             
-    
+                                @csrf
+                                @method('DELETE')
+            
+                                <button type="submit" class="badge bg-danger border-0" title="Delete" onclick="return confirm('Apakah Anda yakin ingin menghapus data ini?')"><span data-feather="trash-2"></button>
                             </form>
                         </td>
                     </tr>
