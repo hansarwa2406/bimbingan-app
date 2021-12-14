@@ -68,8 +68,16 @@
           @enderror
       </div>
     
-     
-      <button type="submit" class="btn btn-primary">Update Jadwal Bimbingan</button>
+    <div class="mb-3">
+        <label for="persetujuan" class="form-label">Persetujuan</label>
+        <select class="form-select" name="persetujuan">
+            <option value="Tolak" selected>Tolak</option>
+            <option value="Setuju">Setuju</option>
+        </select>
+    </div>
+
+
+      <button type="submit" class="btn btn-primary">Apply</button>
       
   </form>
   </div>
