@@ -21,6 +21,7 @@ class CreateJadwalsTable extends Migration
             $table->string('deskripsi');
             $table->datetime('awal');
             $table->datetime('akhir');
+            $table->string('status');
             $table->timestamps();
         });
     }

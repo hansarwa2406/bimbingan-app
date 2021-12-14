@@ -64,6 +64,8 @@
               </div>
           @enderror
       </div>
+
+      <input type="hidden" id="status" name="status" value="Menunggu persetujuan">
      
       <button type="submit" class="btn btn-primary">Submit</button>
   </form>

@@ -16,9 +16,9 @@ class JadwalController extends Controller
         $jadwal = Jadwal::latest()->paginate(5);
         return view ('jadwal.index',compact('jadwal'))->with('i', (request()->input('page', 1) -1) * 5);
 
-        return view('/jadwal', [
-            'schedules' => Jadwal::where('user_id', auth()->user()->id)->get()
-        ]);
+        // return view('/jadwal', [
+        //     'schedules' => Jadwal::where('user_id', auth()->user()->id)->get()
+        // ]);
     }
 
     /**
@@ -46,6 +46,7 @@ class JadwalController extends Controller
             'deskripsi' => 'required',
             'awal' => 'required',
             'akhir' => 'required',
+            'status' => 'required'
         ]);
         Jadwal::create($request->all());
 
@@ -90,6 +91,7 @@ class JadwalController extends Controller
             'deskripsi' => 'required',
             'awal' => 'required',
             'akhir' => 'required',
+            'status' => 'required'
         ]);
 
         $jadwal->update($request->all());

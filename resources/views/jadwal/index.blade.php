@@ -25,6 +25,7 @@
                     <th scope="col">Deskripsi</th>
                     <th scope="col">Awal</th>
                     <th scope="col">Akhir</th>
+                    <th scope="col">Status</th>
                     <th scope="col">Actions</th>
                 </tr>
             </thead>
@@ -38,6 +39,7 @@
                         <td>{{ $schedule->deskripsi }}</td>
                         <td>{{ $schedule->awal }}</td>
                         <td>{{ $schedule->akhir }}</td>
+                        <td>{{ $schedule->status }}</td>
                         <td class=" text-center">
                             <form action="{{ route('jadwal.destroy',$schedule->id) }}" method="POST" class=" d-inline">
                                 <a class="badge bg-info text-decoration-none" title="View" href="{{ route('jadwal.show',$schedule->id) }}"><span data-feather="eye"></a>
