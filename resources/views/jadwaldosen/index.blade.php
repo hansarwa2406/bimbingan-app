@@ -41,7 +41,7 @@
                         <td>{{ $schedule->status }}</td>
                         <td class=" text-center">
                             <form action="{{ route('jadwaldosen.destroy',$schedule->id) }}" method="POST" class=" d-inline">
-                                <a class="badge bg-info text-decoration-none" title="View" href="{{ route('jadwaldosen.show',$schedule->id) }}"><span data-feather="eye"></a>
+                                <a class="badge bg-info text-decoration-none" title="View" href="{{ route('jadwaldosen.show',['jadwal'=>$schedule->id)] }}"><span data-feather="eye"></a>
 
                                 <a class="badge bg-warning text-decoration-none" title="Edit" href="{{ route('jadwaldosen.edit',$schedule->id) }}"><span data-feather="edit"></a>
             

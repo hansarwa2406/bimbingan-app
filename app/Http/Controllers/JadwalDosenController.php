@@ -56,9 +56,12 @@ class JadwalDosenController extends Controller
      * @param  \App\Models\Jadwal  $jadwal
      * @return \Illuminate\Http\Response
      */
-    public function show(Jadwal $jadwal)
+    public function show(Jadwal $jadwal_id)
     {
-        return view('dosen.jadwal.show',compact('jadwal'));
+        $jadwal=Jadwal::where('id',2)->first();
+       
+        return dd($jadwal_id->id);
+        // return view('jadwaldosen.show',compact('jadwal'));
     }
 
     /**
