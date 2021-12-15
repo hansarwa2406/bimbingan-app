@@ -29,7 +29,7 @@
                 </tr>
             </thead>
             <tbody>
-                @foreach ($jadwaldosen as $schedule)
+                @foreach ($datajadwal as $schedule)
                     <tr>
                         <td class=" text-center">{{ $loop->iteration }}</td>
                         <td>{{ $schedule->mahasiswa_id }}</td>
@@ -53,5 +53,5 @@
             </tbody>
         </table>
     </div>
-    {!! $jadwaldosen->links() !!}
+    {{-- {!! $datajadwal->links() !!} --}}
 @endsection

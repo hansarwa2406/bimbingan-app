@@ -14,7 +14,7 @@ class JadwalDosenController extends Controller
      */
     public function index()
     {
-        $datajadwal=Jadwal::where('dosen_id',auth()->user()->id)->all();
+        $datajadwal=Jadwal::where('dosen_id',auth()->user()->id)->get();
 
         return view('jadwaldosen.index',compact('datajadwal'));
 
@@ -101,7 +101,7 @@ class JadwalDosenController extends Controller
 
         $jadwal->update($request->all());
 
-        return redirect()->route('dosen.jadwal.index')->with('success','Jadwal Berhasil di Update');
+        return redirect()->route('jadwaldosen.index')->with('success','Jadwal Berhasil di Update');
     }
 
     /**
