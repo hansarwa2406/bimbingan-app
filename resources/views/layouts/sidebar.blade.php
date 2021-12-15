@@ -9,28 +9,28 @@
             </li>
             <li class="nav-item">
                 <a class="nav-link {{ Request::is('mahasiswa*') ? 'active' : '' }}" href="/mahasiswa">
-                    <span data-feather="file-text"></span>
+                    <span data-feather="user"></span>
                     Data Mahasiswa
                 </a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link {{ Request::is('dosen*') ? 'active' : '' }}" href="/dosen">
-                    <span data-feather="file-text"></span>
-                    Data Dosen
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link {{ Request::is('jadwaldosen*') ? 'active' : '' }}" href="/jadwaldosen">
-                    <span data-feather="file-text"></span>
-                    Jadwal Dosen
-                </a>
-            </li>
-            <li class="nav-item">
+            <ul class="nav-item">
                 <a class="nav-link {{ Request::is('jadwal*') ? 'active' : '' }}" href="/jadwal">
                     <span data-feather="clock"></span>
                     Jadwal Bimbingan
                 </a>
+            </ul>
+            <li class="nav-item">
+                <a class="nav-link {{ Request::is('dosen*') ? 'active' : '' }}" href="/dosen">
+                    <span data-feather="user-check"></span>
+                    Data Dosen
+                </a>
             </li>
+            <ul class="nav-item">
+                <a class="nav-link {{ Request::is('jadwaldosen*') ? 'active' : '' }}" href="/jadwaldosen">
+                    <span data-feather="calendar"></span>
+                    Jadwal Dosen
+                </a>
+            </ul>
         </ul>
     </div>
 </nav>

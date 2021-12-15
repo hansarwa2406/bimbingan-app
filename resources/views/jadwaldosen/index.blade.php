@@ -2,7 +2,7 @@
 
 @section('container')
     <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-        <h1 class="h2">Data Jadwal Bimbingan</h1>
+        <h1 class="h2">Daftar Jadwal Bimbingan Mahasiswa</h1>
     </div>
 
     @if (session('success'))
@@ -14,7 +14,6 @@
     @endif
 
     <div class="table-responsive col-lg-10">
-        <a href="{{ route('jadwaldosen.create') }}" class="btn btn-primary mb-3"><span data-feather="plus-circle"></span> Tambah Jadwal Bimbingan</a>
         <table class="table table-striped table-sm">
             <thead>
                 <tr class=" text-center">
@@ -46,10 +45,7 @@
 
                                 <a class="badge bg-warning text-decoration-none" title="Edit" href="{{ route('jadwaldosen.edit',$schedule->id) }}"><span data-feather="edit"></a>
             
-                                @csrf
-                                @method('DELETE')
-            
-                                <button type="submit" class="badge bg-danger border-0" title="Delete" onclick="return confirm('Apakah Anda yakin ingin menghapus data ini?')"><span data-feather="trash-2"></button>
+                                    
                             </form>
                         </td>
                     </tr>
