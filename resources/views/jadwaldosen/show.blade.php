@@ -9,42 +9,42 @@
                     <div class="col-xs-12 col-sm-12 col-md-12">
                         <div class="form-group">
                            <p>
-                             <h5> <b> Mahasiswa: </b> {{ $jadwaldosen->mahasiswa_id }}</h5> 
+                             <h5> <b> Mahasiswa: </b> {{ $jadwal->mahasiswa_id }}</h5> 
                           </p> 
                         </div>
                     </div>
                     <div class="col-xs-12 col-sm-12 col-md-12">
                         <div class="form-group">
                             <p>
-                                <h5> <b> Dosen:</b> {{ $jadwaldosen->dosen_id }}</h5> 
+                                <h5> <b> Dosen:</b> {{ $jadwal->dosen_id }}</h5> 
                              </p>                        
                         </div>
                     </div>
                     <div class="col-xs-12 col-sm-12 col-md-12">
                         <div class="form-group">
                             <p>
-                                <h5><b>Judul: </b> {{ $jadwaldosen->judul }}</h5>
+                                <h5><b>Judul: </b> {{ $jadwal->judul }}</h5>
                             </p>              
                         </div>
                     </div>
                     <div class="col-xs-12 col-sm-12 col-md-12">
                         <div class="form-group">
                             <p>
-                                <h5><b>Deskripsi: </b> {{ $jadwaldosen->deskripsi }}</h5>
+                                <h5><b>Deskripsi: </b> {{ $jadwal->deskripsi }}</h5>
                             </p>              
                         </div>
                     </div>
                     <div class="col-xs-12 col-sm-12 col-md-12">
                         <div class="form-group">
                             <p>
-                                <h5><b>Awal: </b> {{ $jadwaldosen->awal }}</h5>
+                                <h5><b>Awal: </b> {{ $jadwal->awal }}</h5>
                             </p>
                         </div>
                     </div>
                     <div class="col-xs-12 col-sm-12 col-md-12">
                         <div class="form-group">
                             <p>
-                                <h5><b>Akhir: </b> {{ $jadwaldosen->akhir }}</h5>
+                                <h5><b>Akhir: </b> {{ $jadwal->akhir }}</h5>
                             </p>
                         </div>
                     </div>

@@ -47,7 +47,7 @@ class JadwalDosenController extends Controller
         ]);
         Jadwal::create($request->all());
 
-        return redirect()->route('jadwaldosen.index')->with('success','Jadwal Berhasil di Input');
+        return redirect()->route('dosen.jadwal.index')->with('success','Jadwal Berhasil di Input');
     }
 
     /**
@@ -58,8 +58,7 @@ class JadwalDosenController extends Controller
      */
     public function show(Jadwal $jadwal)
     {
-        $jadwaldosen = $jadwal;
-        return view('jadwaldosen.show',compact('jadwaldosen'));
+        return view('dosen.jadwal.show',compact('jadwal'));
     }
 
     /**
@@ -70,8 +69,7 @@ class JadwalDosenController extends Controller
      */
     public function edit(Jadwal $jadwal)
     {
-        $jadwaldosen = $jadwal;
-        return view('jadwaldosen.edit', compact('jadwaldosen'));
+        return view('dosen.jadwal.edit', compact('jadwal'));
     }
 
     /**
@@ -95,7 +93,7 @@ class JadwalDosenController extends Controller
 
         $jadwal->update($request->all());
 
-        return redirect()->route('jadwaldosen.index')->with('success','Jadwal Berhasil di Update');
+        return redirect()->route('dosen.jadwal.index')->with('success','Jadwal Berhasil di Update');
     }
 
     /**
