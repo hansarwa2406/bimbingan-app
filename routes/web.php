@@ -32,6 +32,7 @@ Route::resource('/mahasiswa', MahasiswaController::class)->middleware('auth');
 
 // --CRUD dosen
 Route::resource('/dosen', DosenController::class)->middleware('auth');
+
 Route::resource('/jadwaldosen', JadwalDosenController::class)->middleware('auth');
 
 // --CRUD jadwal

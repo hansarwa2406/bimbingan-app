@@ -72,7 +72,7 @@
         <label for="status" class="form-label">Persetujuan</label>
         <select class="form-select" name="status">
             <option value="Ditolak" selected>Ditolak</option>
-            <option value="Disetuju">Disetujui</option>
+            <option value="Disetujui">Disetujui</option>
         </select>
     </div>
 
