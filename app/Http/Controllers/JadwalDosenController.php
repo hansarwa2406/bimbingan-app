@@ -58,6 +58,7 @@ class JadwalDosenController extends Controller
      */
     public function show(Jadwal $jadwal)
     {
+        $jadwaldosen = $jadwal;
         return view('jadwaldosen.show',compact('jadwaldosen'));
     }
 
@@ -69,6 +70,7 @@ class JadwalDosenController extends Controller
      */
     public function edit(Jadwal $jadwal)
     {
+        $jadwaldosen = $jadwal;
         return view('jadwaldosen.edit', compact('jadwaldosen'));
     }
 
