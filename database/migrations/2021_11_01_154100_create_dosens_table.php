@@ -20,6 +20,7 @@ class CreateDosensTable extends Migration
             $table->string('alamat');
             $table->string('kontak');
             $table->timestamps();
+
         });
     }
 

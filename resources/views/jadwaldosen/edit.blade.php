@@ -9,7 +9,7 @@
   </div>
  
   <div class="col-lg-8">
-    <form action="{{route('jadwal.update', $jadwal)}}" method="POST"  enctype="multipart/form-data">
+    <form action="{{route('jadwaldosen.update', $jadwal)}}" method="POST"  enctype="multipart/form-data">
         @csrf
         @method('PUT')
         <div class="mb-3">
