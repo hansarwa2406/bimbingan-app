@@ -28,17 +28,17 @@ Route::get('/', function(){
     return view('index');
 });
 // --CRUD mahasiswa
-Route::resource('/mahasiswa', MahasiswaController::class);
+Route::resource('/mahasiswa', MahasiswaController::class)->middleware('auth');
 
 // --CRUD dosen
-Route::resource('/dosen', DosenController::class);
-Route::resource('/jadwaldosen', JadwalDosenController::class);
+Route::resource('/dosen', DosenController::class)->middleware('auth');
+Route::resource('/jadwaldosen', JadwalDosenController::class)->middleware('auth');
 
 // --CRUD jadwal
-Route::resource('/jadwal', JadwalController::class);
+Route::resource('/jadwal', JadwalController::class)->middleware('auth');
 
 // --Login
-Route::get('/login', [LoginController::class, 'index'])->middleware('guest');
+Route::get('/login', [LoginController::class, 'index'])->name('login')->middleware('guest');
 Route::post('/login', [LoginController::class, 'authenticate']);
 Route::post('/logout', [LoginController::class, 'logout']);
 
