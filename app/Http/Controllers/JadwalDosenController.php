@@ -14,9 +14,9 @@ class JadwalDosenController extends Controller
      */
     public function index()
     {
-        $datajadwal=Jadwal::where('id',$jadwal)->first();
+        $datajadwal=Jadwal::where('dosen_id',auth()->user()->id)->all();
 
-        return view('jadwaldosen.show',compact('datajadwal'));
+        return view('jadwaldosen.index',compact('datajadwal'));
 
         // $jadwaldosen = Jadwal::latest()->paginate(5);
         // return view ('jadwaldosen.index',compact('jadwaldosen'))->with('i', (request()->input('page', 1) -1) * 5);
