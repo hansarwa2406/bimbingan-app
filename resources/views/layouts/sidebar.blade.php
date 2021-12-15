@@ -20,7 +20,7 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link {{ Request::is('/jadwaldosen*') ? 'active' : '' }}" href="/jadwaldosen">
+                <a class="nav-link {{ Request::is('jadwaldosen*') ? 'active' : '' }}" href="/jadwaldosen">
                     <span data-feather="file-text"></span>
                     Jadwal Dosen
                 </a>

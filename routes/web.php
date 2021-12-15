@@ -33,6 +33,7 @@ Route::resource('/mahasiswa', MahasiswaController::class);
 // --CRUD dosen
 Route::resource('/dosen', DosenController::class);
 Route::resource('/jadwaldosen', JadwalDosenController::class);
+
 // --CRUD jadwal
 Route::resource('/jadwal', JadwalController::class);
 

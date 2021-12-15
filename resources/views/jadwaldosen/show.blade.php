@@ -49,7 +49,7 @@
                         </div>
                     </div>
                     <div class="tools p-2 rounded-3">
-                        <a href="{{ route('jadwal.index') }}" class="btn btn-secondary mb-3"><span data-feather="arrow-left"></span> Kembali</a>
+                        <a href="{{ route('jadwaldosen.index') }}" class="btn btn-secondary mb-3"><span data-feather="arrow-left"></span> Kembali</a>
                       </div>
                 </div>
         </div>

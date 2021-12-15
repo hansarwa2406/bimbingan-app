@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Models\Jadwal;
 use Illuminate\Http\Request;
 
+use function GuzzleHttp\Promise\all;
+
 class JadwalDosenController extends Controller
 {
     /**
@@ -47,7 +49,7 @@ class JadwalDosenController extends Controller
         ]);
         Jadwal::create($request->all());
 
-        return redirect()->route('dosen.jadwal.index')->with('success','Jadwal Berhasil di Input');
+        return redirect()->route('jadwaldosen.index')->with('success','Jadwal Berhasil di Input');
     }
 
     /**
@@ -58,7 +60,7 @@ class JadwalDosenController extends Controller
      */
     public function show(Jadwal $jadwal)
     {
-        return view('dosen.jadwal.show',compact('jadwal'));
+        return view('jadwaldosen.show',compact('jadwal'));
     }
 
     /**
@@ -69,7 +71,10 @@ class JadwalDosenController extends Controller
      */
     public function edit(Jadwal $jadwal)
     {
-        return view('dosen.jadwal.edit', compact('jadwal'));
+        // return view('jadwaldosen.edit', compact('jadwal'));
+        return view('jadwaldosen.edit', [
+            'jadwal' => $jadwal
+        ]);
     }
 
     /**
@@ -92,8 +97,9 @@ class JadwalDosenController extends Controller
         ]);
 
         $jadwal->update($request->all());
+        
 
-        return redirect()->route('dosen.jadwal.index')->with('success','Jadwal Berhasil di Update');
+        return redirect()->route('jadwaldosen.index')->with('success','Jadwal Berhasil di Update');
     }
 
     /**

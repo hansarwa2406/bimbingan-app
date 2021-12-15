@@ -5,11 +5,11 @@
     <h1 class="h2">Edit Jadwal Bimbingan</h1>
   </div>
   <div class="tools p-2 rounded-3">
-    <a href="{{ route('jadwal.index') }}" class="btn btn-secondary mb-3"><span data-feather="arrow-left"></span> Kembali</a>
+    <a href="{{ route('jadwaldosen.index') }}" class="btn btn-secondary mb-3"><span data-feather="arrow-left"></span> Kembali</a>
   </div>
  
   <div class="col-lg-8">
-    <form action="{{ route('jadwal.update',$jadwal->id) }}" method="POST"  enctype="multipart/form-data">
+    <form action="{{route('jadwal.update', $jadwal)}}" method="POST"  enctype="multipart/form-data">
         @csrf
         @method('PUT')
         <div class="mb-3">
